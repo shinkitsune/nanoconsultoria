@@ -1,0 +1,85 @@
+.container-principal {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 100% 1fr;
+}
+
+.container-principal>header {
+    grid-area: header;
+    text-align: left;
+}
+
+.container-principal>content {
+    grid-area: main;
+    top: 500px;
+}
+
+.container-principal>footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 1%;
+}
+
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 50px;
+    color: black;
+    background-color: purple;
+}
+
+.fixed-nav-bar li,
+.fixed-nav-bar a {
+    height: 50px;
+    line-height: 50px;
+}
+
+.menu {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu a,
+.menu a:visited {
+    color: #ffffff;
+}
+
+.menu a:hover,
+.menu a:target {
+    color: #ebebeb;
+}
+
+.menu-items {
+    display: inline-block;
+}
+
+.sitename {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+a.sitename,
+a:visited.sitename {
+    color: #e0e0e0;
+}
+
+.menu-items li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.menu-items a {
+    text-decoration: none;
+}
+
+footer>.link-interno {
+    margin: 5px 10px;
+}
