@@ -1,85 +1,66 @@
-.container-principal {
+#main {
     display: grid;
-    width: 100%;
-    grid-template-areas: "header header header" "main main main" "footer footer footer";
-    grid-template-rows: 50px 1fr 50px;
-    grid-template-columns: 100% 1fr;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: 50px 470px 30px;
+    grid-row-gap: 10px;
 }
 
-.container-principal>header {
+.navbar {
     grid-area: header;
-    text-align: left;
-}
-
-.container-principal>content {
-    grid-area: main;
-    top: 500px;
-}
-
-.container-principal>footer {
-    grid-area: footer;
-    text-align: center;
-    padding: 1%;
-}
-
-.fixed-nav-bar {
+    z-index: 100;
     position: fixed;
-    top: 0;
+    display: flex;
+}
+
+#logo {
+    padding: 15px;
     left: 0;
-    z-index: 9999;
-    width: 100%;
-    height: 50px;
-    color: black;
-    background-color: purple;
 }
 
-.fixed-nav-bar li,
-.fixed-nav-bar a {
-    height: 50px;
-    line-height: 50px;
+ul {
+    list-style-type: none;
 }
 
-.menu {
-    width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
+li {
+    float: right;
+    padding: 5px;
+    margin-right: 50px;
 }
 
-.menu a,
-.menu a:visited {
-    color: #ffffff;
-}
-
-.menu a:hover,
-.menu a:target {
-    color: #ebebeb;
-}
-
-.menu-items {
-    display: inline-block;
-}
-
-.sitename {
-    display: inline-block;
-    margin-right: 20px;
-    margin-left: 10px;
-}
-
-a.sitename,
-a:visited.sitename {
-    color: #e0e0e0;
-}
-
-.menu-items li {
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.menu-items a {
+li a {
     text-decoration: none;
+    display: block;
 }
 
-footer>.link-interno {
-    margin: 5px 10px;
+li a:hover {
+    color: red;
+}
+
+
+/*.slide {
+    grid-area: slide;
+    background: green;
+    height: 105%;
+}*/
+
+#mainContent {
+    grid-area: main;
+    background: goldenrod;
+    height: 100%;
+}
+
+
+/*aside {
+    grid-area: aside;
+    background: palegreen;
+    align-items: center;
+    display: block;
+}*/
+
+footer {
+    grid-area: footer;
+    bottom: 0;
+    background: darkgray;
+    width: 100%;
 }
